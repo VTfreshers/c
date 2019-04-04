@@ -14,7 +14,7 @@ pipeline
       {
         steps
         {
-            cmakeBuild buildDir: 'build', installation: 'InSearchPath', sourceDir: '/var/lib/jenkins/workspace/hema_c'
+            sh './gcc_shell.sh'
         }
       }
     }
