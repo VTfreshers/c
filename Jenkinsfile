@@ -14,7 +14,7 @@ pipeline
       {
         steps
         {
-            cmakeBuild buildDir: 'build', installation: 'InSearchPath', sourceDir: '/var/lib/jenkins/workspace'
+            cmake --build <var/lib/jenkins/workspace/h_ctest>
         }
       }
     }
