@@ -1,6 +1,10 @@
 pipeline
 {
     agent any
+    tools
+    {
+        cmake   
+    }
     stages
     {
       stage ("fetching code")
@@ -14,7 +18,7 @@ pipeline
       {
         steps
         {
-          cmake sample.c
+            cmakeBuild buildDir: 'build', installation: 'InSearchPath', sourceDir: '/var/lib/jenkins/workspace'
         }
       }
     }
