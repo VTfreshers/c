@@ -14,7 +14,7 @@ pipeline
       {
         steps
         {
-            cmake --build <var/lib/jenkins/workspace/h_ctest>
+            cmakeBuild buildDir: 'build', installation: 'InSearchPath', sourceDir: '/var/lib/jenkins/workspace/hema_c'
         }
       }
     }
