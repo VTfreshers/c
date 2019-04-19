@@ -20,7 +20,7 @@ int main(int argc,char *argv[])
 	else
 	{
 		char *temp=rev(argv[2]),*p;
-		while(p=strstr(argv[1],buf))
+		while(p=strstr(argv[1],argv[2]))
 		{
 			printf("found at %ld\n",p-argv[1]);
 			memmove(p,temp,strlen(temp));
